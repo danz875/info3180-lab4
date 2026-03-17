@@ -13,7 +13,7 @@ class UserProfile(UserMixin, db.Model):
     first_name = db.Column(db.String(80))
     last_name = db.Column(db.String(80))
     username = db.Column(db.String(80), unique=True)
-    password = db.Column(db.String(128))
+    password = db.Column(db.String(255))
 
     def is_authenticated(self):
         return True
